@@ -9,4 +9,6 @@ ADD root.qcow2 /
 
 EXPOSE 22
 
-CMD qemu-system-x86_64 -m 2048 -hda root.qcow2 -nographic -net nic -net user,hostfwd=tcp::22-:22
+VOLUME /SWAP
+
+CMD qemu-system-x86_64 -m 2048 -hda root.qcow2 -nographic -net nic -net user,hostfwd=tcp::22-:22 -virtfs local,path=/SWAP,mount_tag=host0,security_model=passthrough,id=host0
