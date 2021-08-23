@@ -21,4 +21,4 @@ CMD \
 	-virtfs local,path=/SWAP,mount_tag=host0,security_model=passthrough,id=host0 \
 	-kernel /netboot/vmlinuz-virt \
 	-initrd /netboot/initramfs-virt \
-	-append "console=ttyS0 ip=dhcp alpine_repo=http://dl-cdn.alpinelinux.org/alpine/v3.14/main/ ssh_key=https://raw.githubusercontent.com/xsteadfastx/docker-qemu-alpine/main/ssh.pub"
+	-append "console=ttyS0 ip=dhcp alpine_repo=http://dl-cdn.alpinelinux.org/alpine/v3.14/main/ ssh_key=https://raw.githubusercontent.com/xsteadfastx/docker-qemu-alpine/main/ssh.pub modloop=http://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86_64/netboot/modloop-virt"
