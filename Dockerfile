@@ -9,8 +9,8 @@ EXPOSE 22
 
 VOLUME /SWAP
 
-ADD https://alpine.global.ssl.fastly.net/alpine/v3.14/releases/x86_64/netboot/vmlinuz-virt /netboot/vmlinuz-virt
-ADD https://alpine.global.ssl.fastly.net/alpine/v3.14/releases/x86_64/netboot/initramfs-virt /netboot/initramfs-virt
+ADD http://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86_64/netboot/vmlinuz-virt /netboot/vmlinuz-virt
+ADD http://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86_64/netboot/initramfs-virt /netboot/initramfs-virt
 
 CMD \
 	qemu-system-x86_64 \
